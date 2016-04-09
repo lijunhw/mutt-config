@@ -19,7 +19,7 @@ git clone https://github.com/lijunhw/mutt_config.git
 mv mutt_config ~/.mutts
 cd ~/.mutts
 mkdir rc signatures
-cp rc_templates rc/gmail_john  # make an instance of gmail config in rc_templates
+cp rc_templates/gmail rc/gmail_john  # make an instance of gmail config in rc_templates
 vim rc/gmail_john  # do you editing here
 # optional 
 # vim signatures/default.sig
