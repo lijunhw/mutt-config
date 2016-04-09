@@ -1,13 +1,14 @@
 # In minimum, you only need to change those six lines (assuming IMAP and SMTP have same password)
-set realname = 'Yandex User'
-set from = your_yandex_email
-set imap_user   = your_yandex_email
-set imap_pass   = your_yandex_email_app_specific_password
-set my_imap_server = imap.yandex.com
-set my_smtp_server = smtp.yandex.com    # side note: "my_" prefix is Mutt's rule of naming a user-defined variable, or there will be "unknown variable" error
-set signature = "~/.mutts/signatures/default.sig"
+# Side note: "my_" prefix is Mutt's rule of naming a user-defined variable, or there will be "unknown variable" error
+set realname = 'Gmail User'
+set from = your_gmail
+set imap_user   = $from
+set imap_pass   = your_gmail_app_specific_password
+set my_imap_server = imap.gmail.com    
+set my_smtp_server = smtp.gmail.com    
+# set signature = "~/.mutts/signatures/default.sig"
 
-source ~/.mutts/rc/common
+source ~/.mutts/rc_templates/common
 source ~/.mutts/themes/colors_zenburn
 
 set folder   = imaps://$my_imap_server/
@@ -17,8 +18,8 @@ set smtp_url=smtps://$imap_user:$imap_pass@$my_smtp_server/
 
 set spoolfile   = +INBOX  # default folder to display in Mutt after logging in
 mailboxes       = +INBOX  # Define what mutt should treat as "incoming mailboxes" to check for new mail.
-set record      = +Sent
-set postponed = +Drafts   # Place to save postponed messages (IMAP sync'ed)
+unset record              # Avoid duplicates since Gmail saves automatically sent mails to +[Gmail]/Sent
+set postponed = +[Gmail]/Drafts   # Place to save postponed messages (IMAP sync'ed)
 
 
 #### Further tweaks below
