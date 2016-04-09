@@ -21,9 +21,8 @@ cd ~/.mutts
 mkdir rc signatures
 cp rc_templates/gmail rc/gmail_john  # make an instance of gmail config in rc_templates
 vim rc/gmail_john  # do you editing here
-# optional 
-# vim signatures/default.sig
+# vim signatures/default.sig   # add account-wide signature; optional
 mutt -F ~/.mutts/rc/gmail_john
 ```
 
-I have also added [a post](http://ram.lijun.li/linux-mutt-another.html) on this setup. 
+I also hadve [a post](http://ram.lijun.li/linux-mutt-another.html) on this setup. 
