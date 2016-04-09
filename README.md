@@ -26,3 +26,4 @@ vim rc/gmail_john  # do you editing here
 mutt -F ~/.mutts/rc/gmail_john
 ```
 
+I have also added [a post](http://ram.lijun.li/linux-mutt-another.html) on this setup. 
