@@ -7,7 +7,7 @@ This folder hosts the templates for my mutt configurations. I place the whole fo
 * `rc_templates`: muttrc file templates, consisting of one shared rc file (common) plus separate rc files for different mail accounts. These configuration templates have been tested against sending (saved to "Sent"), receiving, and drafting (IMAP sync'ed). 
 * `signatures`: signature files
 * `themes`: color themes making Mutt easier to read. 
-* `rc`: instances based on `rc_templates`; not being git-tracked. 
+* `rc`: instances based on `rc_templates`; not being git-tracked since they may contain personal credentials.
 
 
 ## How to use it
