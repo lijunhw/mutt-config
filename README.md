@@ -1,6 +1,6 @@
 # README
 
-This folder hosts the templates for my mutt configurations. I place the whole folder as `$HOME/.mutts`. 
+This folder hosts the templates for my mutt configurations. 
 
 ## Structure:
 
@@ -11,6 +11,8 @@ This folder hosts the templates for my mutt configurations. I place the whole fo
 
 
 ## How to use it
+
+The default folder path is hard-coded to be `~/.mutts` so follow the procedure below:
 
 ```
 git clone https://github.com/lijunhw/mutt_config.git
