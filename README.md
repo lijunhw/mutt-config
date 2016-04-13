@@ -10,6 +10,11 @@ This folder hosts the templates for my mutt configurations.
 * `rc`: instances based on `rc_templates`; not being git-tracked since they may contain personal credentials.
 
 
+## Caveats
+
+* Outlook.com configuration is not fully working (can get mails via IMAP but cannot sent via SMTP). 
+
+
 ## How to use it
 
 The default folder path is hard-coded to be `~/.mutts` so follow the procedure below:

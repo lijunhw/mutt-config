@@ -1,0 +1,33 @@
+# In minimum, you only need to change those six lines (assuming IMAP and SMTP have same password)
+# Side note: "my_" prefix is Mutt's rule of naming a user-defined variable, or there will be "unknown variable" error
+set realname = 'Outlook User'
+set from = your_outlook_com_mail
+set imap_user   = $from
+set imap_pass   = your_outlook_com_password
+set my_imap_server = imap-mail.outlook.com   
+set my_smtp_server = smtp-mail.outlook.com  
+# set signature = "~/.mutts/signatures/default.sig"
+
+source ~/.mutts/rc_templates/common
+source ~/.mutts/themes/colors_zenburn
+
+set folder   = imaps://$my_imap_server/
+set smtp_url=smtps://$imap_user:$imap_pass@$my_smtp_server/
+
+### Set up folder mapping below
+
+set spoolfile   = +INBOX  # default folder to display in Mutt after logging in
+mailboxes       = +INBOX  # Define what mutt should treat as "incoming mailboxes" to check for new mail.
+set record      = +Sent
+set postponed   = +Drafts   # Place to save postponed messages (IMAP sync'ed)
+
+
+#### Further tweaks below
+
+# If trash folder patch is enabled http://cedricduval.free.fr/mutt/patches/#trash
+# set trash = +Trash
+
+# If don't want to cache header and mail content, uncomment these two lines below
+# unset header_cache
+# unset message_cachedir
+
