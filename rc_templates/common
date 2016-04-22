@@ -31,6 +31,10 @@ set mailcap_path  = "~/.mutts/rc_templates/mailcap"   # Set mailcap path
 alternative_order text/plain text/html   # treat messages as text first, and then HTML
 auto_view text/html   # Auto view HTML messages in Mutt
 
+# Forward a message including attachments
+set mime_forward=yes 
+set mime_forward_rest=yes
+
 # Key binding to refresh the message list
 bind index "^" imap-fetch-mail
 
