@@ -26,6 +26,8 @@ set header_cache = ~/.cache/mutt
 # This will cost important disk usage according to your e-mail amount.
 set message_cachedir = "~/.cache/mutt"
 
+# Set the email character set https://wiki.archlinux.org/index.php/mutt#E-mail_character_encoding
+set send_charset="us-ascii:utf-8"
 
 set mailcap_path  = "~/.mutts/rc_templates/mailcap"   # Set mailcap path
 alternative_order text/plain text/html   # treat messages as text first, and then HTML
@@ -34,6 +36,28 @@ auto_view text/html   # Auto view HTML messages in Mutt
 # Forward a message including attachments
 set mime_forward=yes 
 set mime_forward_rest=yes
+
+####################
+# Set custom mail header
+set edit_headers=yes
+unmy_hdr *
+# unset use_from
+unset use_domain
+unset user_agent
+
+## Extra info.
+my_hdr X-Info: Stay hungy; Stay foolish.
+
+## OS Info.
+my_hdr X-Operating-System: `uname -s`
+
+## This header only appears to MS Outlook users
+my_hdr X-Message-Flag: Not an Outlook fan
+
+## Custom Mail-User-Agent ID.
+my_hdr User-Agent: This one sucks less
+#####################
+
 
 # Key binding to refresh the message list
 bind index "^" imap-fetch-mail
