@@ -20,7 +20,7 @@ This folder hosts the templates for my mutt configurations.
 The default folder path is hard-coded to be `~/.mutts` so follow the procedure below:
 
 ```
-git clone https://github.com/lijunhw/mutt_config.git
+git clone https://github.com/lijuno/mutt_config.git
 mv mutt_config ~/.mutts
 cd ~/.mutts
 mkdir rc signatures
@@ -30,4 +30,4 @@ vim rc/gmail_john  # do you editing here
 mutt -F ~/.mutts/rc/gmail_john
 ```
 
-I also hadve [a post](http://doc.lijun.li/linux-mutt-another.html) on this setup. 
+I also hadve [a post](http://d.lij.uno/linux-mutt-another.html) on this setup. 
